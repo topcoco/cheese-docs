@@ -35,7 +35,7 @@ const core = require('cheese-js');
 ```javascript
 
 const colors = core.cv.colors;
-const recordscreen = core.recordscreen;
+const recordscreen = core.recordScreen;
 if (recordscreen.requestPermission(3)) {
     var src = recordscreen.captureScreen(3, 0, 0, 0, -1)
     if (src != null) {
@@ -67,7 +67,7 @@ if (recordscreen.requestPermission(3)) {
 ```javascript
 
 const colors = core.cv.colors;
-const recordscreen = core.recordscreen;
+const recordscreen = core.recordScreen;
 if (recordscreen.requestPermission(3)) {
     var src = recordscreen.captureScreen(3, 0, 0, 0, -1)
     if (src != null) {
@@ -96,7 +96,7 @@ if (recordscreen.requestPermission(3)) {
 ```javascript
 
 const colors = core.cv.colors;
-const recordscreen = core.recordscreen;
+const recordscreen = core.recordScreen;
 let hex = colors.rgbToHEX(200, 284, 236)
 console.log(hex)
 ```
