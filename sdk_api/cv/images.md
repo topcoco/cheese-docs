@@ -32,7 +32,7 @@ const core = require('cheese-js');
 
 ```javascript
 const images = core.cv.images;
-const recordscreen = core.recordscreen;
+const recordscreen = core.recordScreen;
 if (recordscreen.requestPermission(3)) {
     let bit = recordscreen.captureScreen(3, 0, 0, 0, -1)
     images.binarize(bit, 128)
@@ -61,7 +61,7 @@ if (recordscreen.requestPermission(3)) {
 ```javascript
 
 const images = core.cv.images;
-const recordscreen = core.recordscreen;
+const recordscreen = core.recordScreen;
 if (recordscreen.requestPermission(3)) {
     let bit = recordscreen.captureScreen(3, 0, 0, 0, -1)
     let target = converters.streamToBitmap(converters.assetsToStream("1.png"))
