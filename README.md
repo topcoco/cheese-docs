@@ -2,8 +2,6 @@
 # cheese docs
 cheese-docs is the user manual and instructions for cheese.
 
-## [Docs](http://101.200.84.35)
-
 ### Note: The original content of this repository is released under the MIT open-source license. For other third-party files or content, please adhere to the respective repository's license agreement.
 
 **[Check the open source library information used in this project](DEPEND.md)**
