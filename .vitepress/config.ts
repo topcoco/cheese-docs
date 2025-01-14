@@ -5,6 +5,25 @@ export default defineConfig({
     base: '/',
     title: "Cheese",
     description: "自动化测试框架",
+    head: [
+        ['link', {rel: 'icon', href: '../images/icon.png'}],
+        ['script', {}, `
+        window.difyChatbotConfig = {
+        token: 'MLe5UbIwpHRfdpm6',
+        baseUrl: 'http://ai.codeocean.net'
+      };
+    `],
+        ['script', {src: 'http://ai.codeocean.net/embed.min.js', id: 'MLe5UbIwpHRfdpm6', defer: true}],
+        ['style', {}, `
+      #dify-chatbot-bubble-button {
+        background-color: #1C64F2 !important;
+      }
+      #dify-chatbot-bubble-window {
+        width: 24rem !important;
+        height: 40rem !important;
+      }
+    `]
+    ],
     themeConfig: {
 
         search: {
@@ -351,7 +370,7 @@ export default defineConfig({
                 text: '开源依赖',
                 collapsed: true,
                 items: [
-                    {text:'开源信息', link: '/other/depend'},
+                    {text: '开源信息', link: '/other/depend'},
                 ]
             },
             {
@@ -371,8 +390,4 @@ export default defineConfig({
             {icon: 'github', link: 'https://github.com/topcoco'}
         ]
     },
-    head: [
-        // 设置 favicon
-        ['link', { rel: 'icon', href: '../images/icon.png' }]
-    ]
 })
