@@ -10,10 +10,10 @@ export default defineConfig({
         ['script', {}, `
         window.difyChatbotConfig = {
         token: 'MLe5UbIwpHRfdpm6',
-        baseUrl: 'http://ai.codeocean.net'
+        baseUrl: 'https://ai.codeocean.net'
       };
     `],
-        ['script', {src: 'http://ai.codeocean.net/embed.min.js', id: 'MLe5UbIwpHRfdpm6', defer: true}],
+        ['script', {src: 'https://ai.codeocean.net/embed.min.js', id: 'MLe5UbIwpHRfdpm6', defer: true}],
         ['style', {}, `
       #dify-chatbot-bubble-button {
         background-color: #1C64F2 !important;
