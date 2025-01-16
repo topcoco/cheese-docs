@@ -6,7 +6,8 @@ export default defineConfig({
     title: "Cheese",
     description: "自动化测试框架",
     head: [
-        ['link', {rel: 'icon', href: '../images/icon.png'}]
+        ['link', {rel: 'icon', href: '../images/icon.png'}],
+
     ],
     themeConfig: {
 
@@ -25,6 +26,11 @@ export default defineConfig({
         ],
 
         sidebar: [
+
+            {
+                text: 'Ai',
+                link: '/other/ai'
+            },
             {
                 text: '使用手册',
                 collapsed: true,
@@ -33,6 +39,8 @@ export default defineConfig({
                     {text: '玩转异步和同步?', link: '/other/async-and-sync'},
                 ]
             },
+
+
 
             {
                 text: '高深玩法',
