@@ -46,35 +46,6 @@ base.toast("欢迎使用Cheese")
 base.toast("欢迎使用Cheese", base.gravity.TOP, 0, 0)
 ```
 
-### 运行包装纸字符串: ` public static runWrapperText(filePath:string,jsb:string):void` :green_square:
-
-**参数**:
-
-- ⭐`string` (filePath):文件路径
-- ⭐`string` (jsb):加密字符串
-
-**用法示例**:
-
-```javascript
-
-const base = core.base;
-base.runWrapperText("欢迎使用Cheese","7e4bced6a1bbf2e5b128878b1545f75f83cdad85fe8c0f")
-```
-
-### 运行包装纸文件: ` public static runWrapperFile(filePath:string):void` :green_square:
-
-**参数**:
-
-- ⭐`string` (filePath):文件路径
-
-**用法示例**:
-
-```javascript
-
-const base = core.base;
-const os = core.os;
-base.runWrapperFile(os.JS_DIRECTORY+"/main1.js")
-```
 
 
 ### 详细日志: `public static println(msg:string):void` :green_square:
@@ -119,7 +90,7 @@ console.log("正常运行完毕")
 ```
 
 
-### 自动抛出停止异常: `public static isExitException(e: any): void` :white_check_mark:
+### 判断是不是停止异常: `public static isExitException(e: any): void` :white_check_mark:
 
 **用法示例**:
 
@@ -136,7 +107,7 @@ try{
 ```
 
 ### 强制停止: `public static terminate(id: string = 'all'): void` :white_check_mark:
-
+- Node版引擎独有
 :rotating_light: **危险**
 
 **用法示例**:
