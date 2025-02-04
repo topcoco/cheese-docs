@@ -41,7 +41,7 @@ console.log("cheese-core版本", env.core_version)
 
 
 const env = core.env;
-console.log("context版本", env.context)
+console.log("context", env.context)
 ```
 
 ### cheese-application:`application: string` :white_check_mark:
@@ -52,7 +52,7 @@ console.log("context版本", env.context)
 
 
 const env = core.env;
-console.log("context版本", env.application)
+console.log("application", env.application)
 ```
 
 ### cheese-activity:`activity: string` :white_check_mark:
@@ -62,7 +62,7 @@ console.log("context版本", env.application)
 ```javascript
 
 const env = core.env;
-console.log("context版本", env.activity)
+console.log("activity", env.activity)
 ```
 
 ### cheese-accessibilityService:`accessibilityService: string` :white_check_mark:
@@ -72,7 +72,7 @@ console.log("context版本", env.activity)
 ```javascript
 
 const env = core.env;
-console.log("context版本", env.accessibilityService)
+console.log("accessibilityService", env.accessibilityService)
 ```
 
 ### cheese-javaObjects:`javaObjects: string` :white_check_mark:
@@ -82,7 +82,7 @@ console.log("context版本", env.accessibilityService)
 ```javascript
 
 const env = core.env;
-console.log("context版本", env.javaObjects)
+console.log("javaObjects", env.javaObjects)
 ```
 
 ### cheese-jsObjects:`jsObjects: string` :white_check_mark:
@@ -103,14 +103,4 @@ class Person {
 }
 
 env.jsObjects.put("1", person1)
-```
-
-### cheese-settings:`settings: string` :white_check_mark:
-
-**用法示例**:
-
-```javascript
-
-const env = core.env;
-console.log("当前的引擎名", env.settings.name)
 ```
