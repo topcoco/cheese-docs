@@ -28,23 +28,6 @@ base.sleep(3000)
 console.log("结束休眠时间", timestamp.getTime()); 
 ```
 
-### 初始化OpenCV: `public static initOpenCV(): boolean`  :white_check_mark:
-
-**返回值**:
-
-- :green_circle:`boolean`: true
-- :red_circle:`boolean`: false
-
-**用法示例**:
-
-```javascript
-
-const base = core.base;
-if (base.initOpenCV()) {
-    console.log("初始化OpenCV成功")
-}
-```
-
 ### 吐司: `public static toast(message: string, gravity?: number, xOffset?: number, yOffset?: number): void`  :white_check_mark:
 
 **参数**:
