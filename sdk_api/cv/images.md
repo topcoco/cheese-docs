@@ -4,16 +4,86 @@ outline: deep
 
 ## 图片相关
 
-<div style="background-color: #2f9295; border-left: 6px solid #ffcc00; padding: 15px; margin: 15px 0; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); font-weight: bold;">
-🚨 重要提示：调用图片相关方法请先调用Base相关方法的initOpenCV来初始化Opencv。
-</div>
-
 ```javascript
 //Node版引擎导入方式
 import core from 'cheese-node';
 //JS版引擎导入方式
 const core = require('cheese-js');
 ```
+
+
+### 识别二维码:`public static decodeQRCode(bitmap: Bitmap): string` :white_check_mark:
+
+**参数**:
+
+- ⭐`Bitmap` (bitmap):二维码Bitmap对象
+
+
+**返回值**:
+
+- :green_circle:`Bitmap`:识别内容
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+const images = core.cv.images;
+const converters = core.converters;
+const base = core.base;
+let bit = converters.streamToBitmap(converters.sdToStream(os.ASSETS_DIRECTORY.path+"/test.png"))
+console.log(images.decodeQRCode(bit))
+base.release(bit)
+```
+
+### 生成二维码:`public static generateQRCode(content: string, width: number, height: number): Bitmap` :white_check_mark:
+
+**参数**:
+
+- ⭐`string` (content):二维码内容
+- ⭐`width` (width):二维码宽
+- ⭐`height` (height):二维码高
+
+**返回值**:
+
+- :green_circle:`Bitmap`:生成的二维码Bitmap对象
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+const images = core.cv.images;
+const converters = core.converters;
+const base = core.base;
+let bit =images.generateQRCode("我是内容",500,500)
+base.release(bit)
+```
+
+
+### 绘制Json选框:` public static drawJsonBoundingBoxes(bitmap: Bitmap, json: string): Bitmap` :white_check_mark:
+
+**参数**:
+
+- ⭐`Bitmap` (bitmap):目标图像
+- ⭐`string` (json):框选数据
+
+**返回值**:
+
+- :green_circle:`Bitmap`:生成的图片Bitmap对象
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+const images = core.cv.images;
+const converters = core.converters;
+const base = core.base;
+const files = core.files;
+let b = converters.streamToBitmap(converters.sdToStream(os.ASSETS_DIRECTORY.path+"/5.jpg"))
+files.save(images.drawJsonBoundingBoxes(b,"{"x1":55,"y1":343,"x2":88,"y2":375},{"x1":27,"y1":344,"x2":59,"y2":377}]), "/storage/emulated/0/test1.png") //保存到本地绘制图片
+base.release(b)
+```
+
+
 
 ### 二值化:`public static binarize(inputImage: Bitmap, threshold: number): Bitmap` :white_check_mark:
 
