@@ -24,9 +24,12 @@ outline: deep
 ```toml
 #项目的配置结构可能会随版本更新发生变化。为了确保配置文件正确，建议您定期访问(https://cheese.codeocean.net/other/project-information.html)获取最新的配置信息。
 # 语言绑定
-bindings= "${bindings}"
+bindings= "js-node"
+# bindings= "js"
+# bindings= "ts-node"
+# bindings= "ts"
 # ui类型
-ui = "${ui}"
+ui = "xml"
 # 入口文件
 main = "main"
 
@@ -34,9 +37,9 @@ main = "main"
 # app版本号
 version = "0.0.1"
 # app包名
-package = "${pkg}"
+package = "cheese.demo"
 # app名
-name = "${projectname}"
+name = "Demo"
 # 无障碍服务名称
 accessible_service_name = "cheese"
 # 无障碍服务描述
@@ -56,5 +59,5 @@ build-tools = { version = "34.0.0" }
 # 架构支持 更改此项编译解包需要打开
 ndk = ["x86_64", "arm64-v8a"]
 # 排除内置库 更改此项编译解包需要打开
-excludeLib = ["yolo", "opencv", "ocr"]
+# excludeLib = ["yolo", "opencv", "ocr"]
 ```
