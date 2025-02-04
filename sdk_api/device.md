@@ -231,6 +231,21 @@ const device = core.device;
 console.log("屏幕Dpi", device.getScreenDpi())
 ```
 
+### 获取当前设备CPU架构:`public static getCpuArchitecture(): string` :white_check_mark:
+
+**返回值**:
+
+- :green_circle:`string`:cpu架构信息
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+
+const device = core.device;
+console.log("架构", device.getCpuArchitecture())
+```
+
 ### 获取本机当前时间戳:`getTime(): number` :white_check_mark:
 
 **返回值**:
