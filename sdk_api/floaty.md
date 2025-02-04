@@ -69,48 +69,14 @@ if (floaty.checkPermission()) {
 **用法示例**:
 
 ```javascript
-
-const floaty = core.floaty;
+const floaty = new core.floaty;
 const xml = core.ui.xml;
 const base = core.base;
 let view=xml.parseXml("/storage/emulated/0/Pictures/ui.xml")
-base.runOnUi(() => {
-    floaty.floatWith().setContentView(view)
-        .setDraggable()
-        .setWidth(500)
-        .setHeight(200)
-        .addWindowFlags(LayoutParams.FLAG_NOT_TOUCH_MODAL | LayoutParams.FLAG_NOT_FOCUSABLE)
-        .setWindowType(LayoutParams.TYPE_APPLICATION_OVERLAY)
-        .setDuration(1000)
-        .show();
-})
-
-```
-
-### 绘制矩形:`drawToScreen(...args: any[]): EasyWindow<any> ` :white_check_mark:
-
-**参数**:
-
-- ⭐`string` (args[0]): 矩形外文本
-- ⭐`number` (args[1]): 文本颜色
-- ⭐`number` (args[2]): 矩形框颜色
-- ⭐`Rect` (args[4]): 矩形框范围
-
-
-**返回值**:
-
-- :green_circle:`EasyWindow<any>`:悬浮窗根对象
-- :red_circle:null
-
-**用法示例**:
-
-```javascript
-
-const floaty = core.floaty;
-const base = core.base;
-base.runOnUi(()=>{
-    floaty.getEasyWindowClass().recycleAll()
-    floaty.drawToScreen("相似度：90%",base.Rect1(58, 182, 173, 331)) .setDuration(1000).show()
-})
-
+floaty.floatWith().setContentView(view).setWidth(500)
+    .setHeight(500)
+    .addWindowFlags(floaty.FLAG_NOT_TOUCH_MODAL | floaty.FLAG_NOT_FOCUSABLE)
+    .setWindowType(floaty.TYPE_APPLICATION_OVERLAY)
+    .setDuration(1000)
+floaty.show()
 ```
