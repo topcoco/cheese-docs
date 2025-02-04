@@ -4,9 +4,6 @@ outline: deep
 
 ## 颜色相关
 
-<div style="background-color: #2f9295; border-left: 6px solid #ffcc00; padding: 15px; margin: 15px 0; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); font-weight: bold;">
-🚨 重要提示：调用颜色相关方法请先调用Base相关方法的initOpenCV来初始化Opencv。
-</div>
 
 ```javascript
 //Node版引擎导入方式
