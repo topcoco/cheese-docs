@@ -22,10 +22,11 @@ outline: deep
 
 ## 项目配置文件
 ```toml
+#项目的配置结构可能会随版本更新发生变化。为了确保配置文件正确，建议您定期访问(https://cheese.codeocean.net/other/project-information.html)获取最新的配置信息。
 # 语言绑定
-bindings = "js" #bindings= "ts" bindings= "js-node" bindings= "ts-node"
+bindings= "${bindings}"
 # ui类型
-ui = "vue-element-vform" #ui = "xml" ui = "vue" ui = "react"
+ui = "${ui}"
 # 入口文件
 main = "main"
 
@@ -33,9 +34,9 @@ main = "main"
 # app版本号
 version = "0.0.1"
 # app包名
-package = "coco.cheese"
+package = "${pkg}"
 # app名
-name = "cheese"
+name = "${projectname}"
 # 无障碍服务名称
 accessible_service_name = "cheese"
 # 无障碍服务描述
@@ -44,14 +45,16 @@ accessible_service_desc = "cheese"
 inputmethod_service_name = "cheese"
 # 权限清单
 permissions = [
-    "android.permission.SYSTEM_ALERT_WINDOW",
+"android.permission.SYSTEM_ALERT_WINDOW",
 ]
 
 [build]# 构建配置
+# 代码保护 推荐打包后的app再次使用如360、腾讯等第三方加固
+# protection = { mode = "sign" , path = "",ks-key-alias = "" ,ks-pass = "" ,key-pass= "" }
 # android_sdk_build-tools版本
 build-tools = { version = "34.0.0" }
 # 架构支持 更改此项编译解包需要打开
-ndk = ["x86_64", "x86", "arm64-v8a"]
+ndk = ["x86_64", "arm64-v8a"]
 # 排除内置库 更改此项编译解包需要打开
 excludeLib = ["yolo", "opencv", "ocr"]
 ```
