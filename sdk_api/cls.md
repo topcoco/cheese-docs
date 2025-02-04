@@ -3,6 +3,7 @@ outline: deep
 ---
 
 ## Class相关
+- Node版引擎独有
 
 ```javascript
 //Node版引擎导入方式
