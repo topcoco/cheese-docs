@@ -6,27 +6,6 @@ const core = require('cheese-js');
 ```
 
 
-## 官方维护插件
-
-### Python插件
-```javascript
-
-
-const base = core.base;
-const plugins = core.plugins;
-const cls = core.cls;
-if (plugins.install("/storage/emulated/0/MT2/apks/cheese-python.apk")) {
-    console.log("Python插件加载成功")
-    base.pythonLog()
-    var c = cls.findClass("coco.cheese.plugin.python.PythonCore")
-    let obj = c.new().obj
-    obj.start(plugins.createContext())
-    obj.execPy("print(\"Hello Python\")")
-}
-```
-
-
-
 ### 安装插件:`install(apkPath:string): boolean` :white_check_mark:
 
 
