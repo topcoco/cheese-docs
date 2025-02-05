@@ -99,8 +99,8 @@ const ocr = core.ocr;
 
 let paddle = ocr.paddleOcr()
 let config = paddle.config()
-config.setRunType(ocr.LitePowerMode._LITE_POWER_HIGH_)
-config.setCpuPowerMode(ocr.RunType._All_)
+config.setRunType(ocr.RunType._All_)
+config.setCpuPowerMode(ocr.LitePowerMode._LITE_POWER_HIGH_)
 config.setDrwwTextPositionBox(true)
 config.setModelPath("/storage/emulated/0/models")
 config.setDetModelFileName("det") //文件名不带后缀
