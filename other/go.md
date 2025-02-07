@@ -21,9 +21,7 @@ Cheese 支持多种编程语言的插件开发，包括：
 - Python 插件
 - Go 插件
 - Rust 插件
-- Lua 插件
-- Node.js 插件
-- So 插件
+- C/C++ 插件
 
 ---
 
@@ -41,7 +39,7 @@ Cheese 支持以下 UI 技术：
 支持多种自动化模式：
 
 - 无障碍模式
-- 超级 ADB 模式
+- 远程 ADB 模式
 - 电脑 USB HID 模式
 - ESP32 蓝牙 HID 模式
 
@@ -61,7 +59,7 @@ Cheese 支持以下 UI 技术：
 - YOLOv8
 - ddddocr
 - OpenCV
-- 百度飞浆
+- 百度飞桨
 
 ---
 
