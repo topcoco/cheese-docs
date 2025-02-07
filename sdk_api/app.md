@@ -11,6 +11,37 @@ import core from 'cheese-node';
 const core = require('cheese-js');
 ```
 
+
+### 获取前台包名: ` public static getForegroundPkg(): string :white_check_mark:
+
+**返回值**:
+
+- :green_circle:`string`: 包名
+- :red_circle: null
+
+**用法示例**:
+
+```javascript
+const app = core.app;
+console.log("前台包名",app.getForegroundPkg())
+```
+
+
+### 获取前台类名: ` public static getForegroundCls(): string :white_check_mark:
+
+**返回值**:
+
+- :green_circle:`string`: 类名
+- :red_circle: null
+
+**用法示例**:
+
+```javascript
+const app = core.app;
+console.log("前台类名",app.getForegroundCls())
+```
+
+
 ### 用浏览器打开网站: ` public static openUrl(url: string): void :white_check_mark:
 
 **参数**:
