@@ -12,6 +12,9 @@ const core = require('cheese-js');
 ```
 
 
+
+
+
 ### 识别二维码:`public static decodeQRCode(bitmap: Bitmap): string` :white_check_mark:
 
 **参数**:
@@ -136,6 +139,38 @@ if (recordscreen.requestPermission(3)) {
     let bit = recordscreen.captureScreen(3, 0, 0, 0, -1)
     let target = converters.streamToBitmap(converters.assetsToStream("1.png"))
     console.log(images.findImgBySift(bit, target, 1.1))
+    base.release(bit)
+}
+
+```
+
+
+### 同分辨率-模板找图:
+
+`findImgByTemplate(inputImage: Bitmap, targetImage: Bitmap, threshold: number): IntArray` :white_check_mark:
+
+**参数**:
+
+- ⭐`any` (Bitmap):大图
+- ⭐`Bitmap` (targetImage):小图
+- ⭐`number` (threshold):相似度(0.0 ~ 1.0)
+-
+
+**返回值**:
+
+- :green_circle:`Point[]`:坐标数组
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+
+const images = core.cv.images;
+const recordscreen = core.recordScreen;
+if (recordscreen.requestPermission(3)) {
+    let bit = recordscreen.captureScreen(3, 0, 0, 0, -1)
+    let target = converters.streamToBitmap(converters.assetsToStream("1.png"))
+    console.log(images.findImgByTemplate(bit, target, 1.1))
     base.release(bit)
 }
 
