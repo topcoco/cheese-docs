@@ -88,9 +88,9 @@ let tabl = [
     "hair drier", "toothbrush"
 ];
 try {
+
     var bit = converters.streamToBitmap(converters.assetsToStream("image.png"))
-    console.log(yolo.loadYolo("/storage/emulated/0/Pictures/yolov8n", tabl, 0))
-    var v8obej = yolo.detect(bit)
+    var v8obej = yolo.detect(bit,os.ASSETS_DIRECTORY+"/yolov8t/model.ncnn", tabl, 0)
     console.log(v8obej[0].label)
     console.log(yolo.getSpeed())
     files.save(yolo.draw(v8obej, bit),"/storage/emulated/0/Pictures/4.png")
@@ -129,9 +129,9 @@ let tabl = [
     "hair drier", "toothbrush"
 ];
 try {
+
     var bit = converters.streamToBitmap(converters.assetsToStream("image.png"))
-    console.log(yolo.loadYolo("/storage/emulated/0/Pictures/yolov8n", tabl, 0))
-    var v8obej = yolo.detect(bit)
+    var v8obej = yolo.detect(bit,os.ASSETS_DIRECTORY+"/yolov8t/model.ncnn", tabl, 0)
     console.log(v8obej[0].label)
     console.log(yolo.getSpeed())
     files.save(yolo.draw(v8obej, bit),"/storage/emulated/0/Pictures/4.png")
