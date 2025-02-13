@@ -11,45 +11,9 @@ import core from 'cheese-node';
 const core = require('cheese-js');
 ```
 
-
-
-
-```typescript
-type uiObj = {
-    text: (text:string) => uiObj;
-    _text: string;
-
-    _id: string;
-    id: (text:string) => uiObj;
-
-    desc: (text:string) => uiObj;
-    _desc: string;
-
-    clz: (text:string) => uiObj;
-    _clz: string;
-
-    pkg: (text:string) => uiObj;
-    _pkg: string;
-
-    bounds: (text:string) => uiObj;
-    _bounds: string;
-
-    isClickable: (text:string) => uiObj;
-    _isClickable: boolean;
-
-    and: boolean;
-    or: boolean;
-};
-```
-
 ### 筛选节点:`forEachNode(callback:Callback): this` :white_check_mark:
 
 :lock:**权限**: 无障碍
-
-**扩展属性**:
-
-- 都符合:`and`
-- 一个符合就可以:`or`
 
 **参数**:
 
@@ -63,10 +27,16 @@ type uiObj = {
 **用法示例**:
 
 ```javascript
-
+//e.getText()
+//e.getPackageName()
+//e.getClassName()
+//e.getId()
+//e.getBounds()
+//e.getParent()
+//e.getChildren()
 const uinode = new core.uinode();
 uinode.forEachNode((e) => {
-    return e.text("连接").and
+return e.getText()==="连接"
 })
 ```
 
@@ -86,7 +56,6 @@ uinode.forEachNode((e) => {
 **用法示例**:
 
 ```javascript
-
 const uinode = new core.uinode();
 uinode.clearNodeCache()
 ```
@@ -107,11 +76,13 @@ uinode.clearNodeCache()
 **用法示例**:
 
 ```javascript
-
 const uinode = new core.uinode();
-uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+uinode.forEachNode((e) => {
+return e.getText==="连接"
 }).find()
+if (uinode){
+    console.log("节点存在")
+}
 ```
 
 ### 判断有无节点有则执行:`findOn(value: number=0)` :white_check_mark:
@@ -132,9 +103,9 @@ uinode.forEachNode((e: core.uinode['uiobj']) => {
 ```javascript
 
 const uinode = new core.uinode();
-uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).findOn().click()
+uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).findOn().get(0).tryClick()
 ```
 
 ### 获取节点父亲节点:` getParent(value: number=0): this` :white_check_mark:
@@ -155,9 +126,9 @@ uinode.forEachNode((e: core.uinode['uiobj']) => {
 ```javascript
 
 const uinode = new core.uinode();
-let parent = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getParent().obj
+let parent = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getParent().getText()
 console.log(parent)
 ```
 
@@ -179,9 +150,9 @@ console.log(parent)
 ```javascript
 
 const uinode = new core.uinode();
-let children = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getChildren().obj
+let children = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getChildren().get(0).getText()
 console.log(children)
 ```
 
@@ -203,9 +174,9 @@ console.log(children)
 ```javascript
 
 const uinode = new core.uinode();
-uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getText()
+uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getText()
 console.log(text)
 ```
 
@@ -227,9 +198,9 @@ console.log(text)
 ```javascript
 
 const uinode = new core.uinode();
-let bounds = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getBounds()
+let bounds = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getBounds()
 console.log(bounds)
 ```
 
@@ -251,37 +222,15 @@ console.log(bounds)
 ```javascript
 
 const uinode = new core.uinode();
-let id = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getId()
+let id = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getId()
 console.log(id)
 ```
 
-### 获取节点Desc:`getDesc(value: number=0)` :white_check_mark:
 
-:lock:**权限**: 无障碍
 
-**参数**:
-
-- `number` (value):节点在 nodeObj 数组中的索引值 不填默认为0
-
-**返回值**:
-
-- :green_circle:`string`:Desc信息
-- :red_circle:null
-
-**用法示例**:
-
-```javascript
-
-const uinode = new core.uinode();
-let desc = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getDesc()
-console.log(desc)
-```
-
-### 获取节点Pkg:`getPkg(value: number=0)` :white_check_mark:
+### 获取节点PackageName:`getPackageName(value: number=0)` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -299,13 +248,13 @@ console.log(desc)
 ```javascript
 
 const uinode = new core.uinode();
-let pkg = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getPkg()
+let pkg = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getPackageName()
 console.log(pkg)
 ```
 
-### 获取节点Clz:`getClz(value: number=0)` :white_check_mark:
+### 获取节点类:`getClassName(value: number=0)` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -323,90 +272,51 @@ console.log(pkg)
 ```javascript
 
 const uinode = new core.uinode();
-let clz = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
-}).getClz()
+let clz = uinode.forEachNode((e) => {
+return e.getText==="连接"
+}).get(0).getClassName()
+console.log(clz)
+```
+### 追加文本到输入框:`appendText(text)` :white_check_mark:
+
+:lock:**权限**: 无障碍
+
+**参数**:
+
+- ⭐`string` (text):要输入的内容
+
+
+**用法示例**:
+
+```javascript
+let clz = uinode.forEachNode((e) => {
+    return e.getText==="连接"
+}).get(0).appendText("Hello")
 console.log(clz)
 ```
 
-[//]: # (### 追加文本到输入框:`appendText&#40;value: number=0,text&#41;` :white_check_mark:)
+### 设置文本到输入框:`trySetText(text)` :white_check_mark:
 
-[//]: # ()
-[//]: # (:lock:**权限**: 无障碍)
+:lock:**权限**: 无障碍
 
-[//]: # ()
-[//]: # (**参数**:)
+**参数**:
 
-[//]: # ()
-[//]: # (- `number` &#40;value&#41;:节点在 nodeObj 数组中的索引值 不填默认为0)
+- ⭐`string` (text):要输入的内容
 
-[//]: # (- ⭐`string` &#40;text&#41;:要输入的内容)
+**返回值**:
 
-[//]: # (-)
+- :green_circle:`boolean`: true
+- :red_circle:`boolean`: false
 
-[//]: # ()
-[//]: # (**返回值**:)
 
-[//]: # ()
-[//]: # (- :green_circle:`string`:Clz信息)
+**用法示例**:
 
-[//]: # (- :red_circle:null)
-
-[//]: # ()
-[//]: # (**用法示例**:)
-
-[//]: # ()
-[//]: # (```javascript)
-
-[//]: # (let clz = uinode.forEachNode&#40;&#40;e: core.uinode['uiobj']&#41; => {)
-
-[//]: # (    return e.text&#40;"连接"&#41;.and)
-
-[//]: # (}&#41;.appendText&#40;"Hello"&#41;)
-
-[//]: # (console.log&#40;clz&#41;)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (### 设置文本到输入框:`setText&#40;value: number=0,text&#41;` :white_check_mark:)
-
-[//]: # ()
-[//]: # (:lock:**权限**: 无障碍)
-
-[//]: # ()
-[//]: # (**参数**:)
-
-[//]: # ()
-[//]: # (- `number` &#40;value&#41;:节点在 nodeObj 数组中的索引值 不填默认为0)
-
-[//]: # (- ⭐`string` &#40;text&#41;:要输入的内容)
-
-[//]: # (-)
-
-[//]: # ()
-[//]: # (**返回值**:)
-
-[//]: # ()
-[//]: # (- :green_circle:`string`:Clz信息)
-
-[//]: # (- :red_circle:null)
-
-[//]: # ()
-[//]: # (**用法示例**:)
-
-[//]: # ()
-[//]: # (```javascript)
-
-[//]: # (let clz = uinode.forEachNode&#40;&#40;e: core.uinode['uiobj']&#41; => {)
-
-[//]: # (    return e.text&#40;"连接"&#41;.and)
-
-[//]: # (}&#41;.setText&#40;"Hello"&#41;)
-
-[//]: # (console.log&#40;clz&#41;)
-
-[//]: # (```)
+```javascript
+let clz = uinode.forEachNode((e) => {
+    return e.getText==="连接"
+}).trySetText("Hello")
+console.log(clz)
+```
 
 ### 节点尝试点击:`tryClick(value: number=0)` :white_check_mark:
 
@@ -428,11 +338,11 @@ console.log(clz)
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.tryClick()) {
-    console.log("点击成功")
+if (d.get(0).tryClick()) {
+console.log("点击成功")
 }
 
 ```
@@ -457,11 +367,11 @@ if (d.tryClick()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.click()) {
-    console.log("点击成功")
+if (d.get(0).click()) {
+console.log("点击成功")
 }
 ```
 
@@ -485,11 +395,11 @@ if (d.click()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.longClick()) {
-    console.log("点击成功")
+if (d.get(0).longClick()) {
+console.log("点击成功")
 }
 ```
 
@@ -513,11 +423,11 @@ if (d.longClick()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.tryLongClick()) {
-    console.log("点击成功")
+if (d.get(0).tryLongClick()) {
+console.log("点击成功")
 }
 
 ```
@@ -540,11 +450,11 @@ if (d.tryLongClick()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.doubleClick()) {
-    console.log("点击成功")
+if (d.get(0).doubleClick()) {
+console.log("点击成功")
 }
 ```
 
@@ -568,11 +478,11 @@ if (d.doubleClick()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.globalClick()) {
-    console.log("点击成功")
+if (d.get(0).globalClick()) {
+console.log("点击成功")
 }
 
 ```
@@ -597,11 +507,11 @@ if (d.globalClick()) {
 ```javascript
 
 const uinode = new core.uinode();
-let d = uinode.forEachNode((e: core.uinode['uiobj']) => {
-    return e.text("连接").and
+let d = uinode.forEachNode((e) => {
+return e.getText==="连接"
 })
-if (d.globalLongClick()) {
-    console.log("点击成功")
+if (d.get(0).globalLongClick()) {
+console.log("点击成功")
 }
 ```
 
