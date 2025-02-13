@@ -23,7 +23,7 @@ const filese = core.files;
 const images = core.cv.images;
 let c = ocr.dddddOcr()
 //ddddocr和相关模型可在cheese官方网盘获取：https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234
-if (c.init("/storage/emulated/0/Pictures/ddddocr", "/storage/emulated/0/Pictures/model")) {
+if (c.init("/storage/emulated/0/Pictures/model")) {
 //测试 ocr
     console.log("***************测试ocr")
     let a = converters.streamToBitmap(converters.sdToStream(os.ASSETS_DIRECTORY.path+"/3.png"))
