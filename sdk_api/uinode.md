@@ -108,7 +108,7 @@ return e.getText==="连接"
 }).findOn().get(0).tryClick()
 ```
 
-### 获取节点父亲节点:` getParent(value: number=0): this` :white_check_mark:
+### 获取节点父亲节点:` getParent(): this` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -132,7 +132,7 @@ return e.getText==="连接"
 console.log(parent)
 ```
 
-### 获取节点儿子节点:` getChildren(value: number=0): this` :white_check_mark:
+### 获取节点儿子节点:` getChildren(): this` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -156,7 +156,7 @@ return e.getText==="连接"
 console.log(children)
 ```
 
-### 获取节点text信息:`getText(value: number=0)` :white_check_mark:
+### 获取节点text信息:`getText()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -180,7 +180,7 @@ return e.getText==="连接"
 console.log(text)
 ```
 
-### 获取节点范围:`getBounds(value: number=0)` :white_check_mark:
+### 获取节点范围:`getBounds()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -204,7 +204,7 @@ return e.getText==="连接"
 console.log(bounds)
 ```
 
-### 获取节点Id:`getId(value: number=0)` :white_check_mark:
+### 获取节点Id:`getId()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -230,7 +230,7 @@ console.log(id)
 
 
 
-### 获取节点PackageName:`getPackageName(value: number=0)` :white_check_mark:
+### 获取节点PackageName:`getPackageName()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -254,7 +254,7 @@ return e.getText==="连接"
 console.log(pkg)
 ```
 
-### 获取节点类:`getClassName(value: number=0)` :white_check_mark:
+### 获取节点类:`getClassName()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -318,7 +318,7 @@ let clz = uinode.forEachNode((e) => {
 console.log(clz)
 ```
 
-### 节点尝试点击:`tryClick(value: number=0)` :white_check_mark:
+### 节点尝试点击:`tryClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -347,7 +347,7 @@ console.log("点击成功")
 
 ```
 
-### 节点点击:`click(value: number=0)` :white_check_mark:
+### 节点点击:`click()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -375,7 +375,7 @@ console.log("点击成功")
 }
 ```
 
-### 节点长按点击:`longClick(value: number=0)` :white_check_mark:
+### 节点长按点击:`longClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -403,7 +403,7 @@ console.log("点击成功")
 }
 ```
 
-### 尝试节点长按点击:`tryLongClick(value: number=0)` :white_check_mark:
+### 尝试节点长按点击:`tryLongClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -432,7 +432,7 @@ console.log("点击成功")
 
 ```
 
-### 双击点击节点:`doubleClick(value: number=0)` :white_check_mark:
+### 双击点击节点:`doubleClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -458,7 +458,7 @@ console.log("点击成功")
 }
 ```
 
-### 全局节点点击:`globalClick(value: number=0)` :white_check_mark:
+### 全局节点点击:`globalClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
@@ -487,7 +487,7 @@ console.log("点击成功")
 
 ```
 
-### 全局长按节点:`globalLongClick(value: number=0)` :white_check_mark:
+### 全局长按节点:`globalLongClick()` :white_check_mark:
 
 :lock:**权限**: 无障碍
 
