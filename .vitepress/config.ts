@@ -273,6 +273,14 @@ export default defineConfig({
 
                         ]
                     },
+                     {
+                        text: 'shell Shell代理函数',
+                        collapsed: true,
+                        items: [
+                            {text: '展开所有方法', link: '/sdk_api/shell'},
+
+                        ]
+                    },
                     {
                         text: 'websocket websocket函数',
                         collapsed: true,
