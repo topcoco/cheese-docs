@@ -52,6 +52,8 @@ permissions = [
 ]
 
 [build]# 构建配置
+# 热更新配置
+hot = ｛ version = "0.0.1", url = "http://127.0.0.1:7777" ｝
 # 代码保护 推荐打包后的app再次使用如360、腾讯等第三方加固
 # protection = { mode = "sign" , path = "",ks-key-alias = "" ,ks-pass = "" ,key-pass= "" }
 # android_sdk_build-tools版本
