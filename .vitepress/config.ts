@@ -289,7 +289,13 @@ export default defineConfig({
 
                         ]
                     },
-
+                     {
+                        text: 'thread 线程函数',
+                        collapsed: true,
+                        items: [
+                            {text: '展开所有方法', link: '/sdk_api/thread'},
+                        ]
+                    },
                     {
                         text: 'time 时间函数',
                         collapsed: true,
