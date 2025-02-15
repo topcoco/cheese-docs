@@ -27,14 +27,30 @@ const core = require('cheese-js');
 **用法示例**:
 
 ```javascript
-//e.getText()
-//e.getPackageName()
-//e.getClassName()
-//e.getId()
-//e.getBounds()
-//e.getParent()
-//e.getChildren()
-const uinode = new core.uinode();
+更多属性请参考代码提示
+//isEditable():boolean;
+//isDismissable():boolean;
+//isChecked():boolean;
+//isEnabled():boolean;
+//isPassword():boolean;
+//isScrollable():boolean;
+//isGranularScrollingSupported():boolean;
+//isTextSelectable():boolean;
+//isImportantForAccessibility():boolean;
+//isAccessibilityDataSensitive():boolean;
+//getText(): string;
+//getViewIdResourceName(): string;
+//getWindowId(): number;
+//getScopeId(): string;
+//getScopeName(): string;
+//getClassName(): string;
+//getChild(i:number): AccessibilityNodeInfoCompat;
+//getBoundsInWindow(outBounds:Rect);
+//getBoundsInScreen(outBounds:Rect);
+//getRoleDescription():string;
+//getStateDescription():string;
+//getContentDescription():string;
+//const uinode = new core.uinode();
 uinode.forEachNode((e) => {
 return e.getText()==="连接"
 })
