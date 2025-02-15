@@ -76,54 +76,6 @@ const uinode = new core.uinode();
 uinode.clearNodeCache()
 ```
 
-### 判断有无节点:`find(value: number=0)` :white_check_mark:
-
-:lock:**权限**: 无障碍
-
-**参数**:
-
-- `number` (value):节点在 nodeObj 数组中的索引值 不填默认为0
-
-**返回值**:
-
-- :green_circle:`boolean`:true
-- :red_circle:`boolean`:fasle
-
-**用法示例**:
-
-```javascript
-const uinode = new core.uinode();
-uinode.forEachNode((e) => {
-return e.getText==="连接"
-}).find()
-if (uinode){
-    console.log("节点存在")
-}
-```
-
-### 判断有无节点有则执行:`findOn(value: number=0)` :white_check_mark:
-
-:lock:**权限**: 无障碍
-
-**参数**:
-
-- `number` (value):节点在 nodeObj 数组中的索引值 不填默认为0
-
-**返回值**:
-
-- :green_circle:`this`:当前类对象
-- :red_circle:null
-
-**用法示例**:
-
-```javascript
-
-const uinode = new core.uinode();
-uinode.forEachNode((e) => {
-return e.getText==="连接"
-}).findOn().get(0).tryClick()
-```
-
 ### 获取节点父亲节点:` getParent(): this` :white_check_mark:
 
 :lock:**权限**: 无障碍
@@ -140,7 +92,6 @@ return e.getText==="连接"
 **用法示例**:
 
 ```javascript
-
 const uinode = new core.uinode();
 let parent = uinode.forEachNode((e) => {
 return e.getText==="连接"
