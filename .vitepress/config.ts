@@ -255,15 +255,6 @@ export default defineConfig({
 
                         ]
                     },
-                    {
-                        text: 'release 释放函数',
-                        collapsed: true,
-                        items: [
-                            {text: '展开所有方法', link: '/sdk_api/release'},
-
-
-                        ]
-                    },
 
                     {
                         text: 'root Root函数',
