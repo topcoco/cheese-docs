@@ -2,14 +2,11 @@
 outline: deep
 ---
 
-## Class相关
-- Node版引擎独有
+## Class相关 - Node版引擎独享
 
 ```javascript
 //Node版引擎导入方式
 import core from 'cheese-node';
-//JS版引擎导入方式
-const core = require('cheese-js');
 ```
 
 ### 类型
