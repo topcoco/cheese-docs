@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-## 工作线程相关 - Node版引擎独有
+## 工作线程相关 - Node版引擎独享
 
 ```javascript
 import core from 'cheese-node';
