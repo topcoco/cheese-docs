@@ -59,7 +59,7 @@ hot = ｛ version = "0.0.1", url = "http://127.0.0.1:7777" ｝
 # android_sdk_build-tools版本
 build-tools = { version = "34.0.0" }
 # 架构支持 更改此项编译解包需要打开
-ndk = ["x86_64", "arm64-v8a"]
+# ndk = ["x86_64", "arm64-v8a"]
 # 排除内置库 更改此项编译解包需要打开
-# excludeLib = ["yolo", "opencv", "ocr"]
+# excludeLib = ["yolo", "opencv", "paddleocr", "paddleocr", "ddddocr", "mlkitocr"]
 ```
