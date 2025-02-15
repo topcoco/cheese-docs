@@ -51,9 +51,13 @@ const core = require('cheese-js');
 //getStateDescription():string;
 //getContentDescription():string;
 //const uinode = new core.uinode();
-uinode.forEachNode((e) => {
+let u =uinode.forEachNode((e) => {
 return e.getText()==="连接"
 })
+if(u.size()>0){
+  console.log("节点存在")
+}
+
 ```
 
 ### 清除节点缓存:`clearNodeCache(): boolean` :white_check_mark:
