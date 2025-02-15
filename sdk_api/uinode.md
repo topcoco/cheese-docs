@@ -56,6 +56,16 @@ return e.getText()==="连接"
 })
 if(u.size()>0){
   console.log("节点存在")
+console.log(u.get(0).getBounds())
+}
+
+let u1 =uinode.forEachNode((e) => {
+    let c = e.getBoundsInScreen()
+    return c.left===150 && c.top===536 && c.right===864  && c.bottom===603
+})
+if(u1.size()>0){
+  console.log("节点存在")
+  console.log(u1.get(0).getText())
 }
 
 ```
