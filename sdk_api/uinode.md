@@ -27,7 +27,7 @@ const core = require('cheese-js');
 **用法示例**:
 
 ```javascript
-更多属性请参考代码提示
+//更多属性请参考代码提示
 //isEditable():boolean;
 //isDismissable():boolean;
 //isChecked():boolean;
@@ -69,6 +69,31 @@ if(u1.size()>0){
 }
 
 ```
+
+### 判断节点是否存在:`size(): number` :white_check_mark:
+
+:lock:**权限**: 无障碍
+
+
+**返回值**:
+
+- :green_circle:`number`:节点列表长度
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+let u1 =uinode.forEachNode((e) => {
+    let c = e.getBoundsInScreen()
+    return c.left===150 && c.top===536 && c.right===864  && c.bottom===603
+})
+if(u1.size()>0){
+  console.log("节点存在")
+  console.log(u1.get(0).getText())
+}
+```
+
+
 
 ### 清除节点缓存:`clearNodeCache(): boolean` :white_check_mark:
 
