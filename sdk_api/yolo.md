@@ -38,6 +38,7 @@ const core = require('cheese-js');
 **用法示例**:
 
 ```javascript
+//训练好的推理模型下载：https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234 （其他 >Ai模型 >yolov8模型）
 const yolo = core.yolo;
 const converters = core.converters;
 let tabl = [
