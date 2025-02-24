@@ -52,14 +52,14 @@ permissions = [
 ]
 
 [build]# 构建配置
-# 热更新配置
-hot = ｛ version = "0.0.1", url = "http://127.0.0.1:7777" ｝
-# 代码保护 推荐打包后的app再次使用如360、腾讯等第三方加固
-# protection = { mode = "sign" , path = "",ks-key-alias = "" ,ks-pass = "" ,key-pass= "" }
 # android_sdk_build-tools版本
 build-tools = { version = "34.0.0" }
-# 架构支持 更改此项编译解包需要打开
+# 热更新 - 默认关闭
+# hot = { version = "0.0.1" , url = "http://127.0.0.1:7777/update"}
+# 代码保护 推荐打包后的app再次使用如360、腾讯等第三方加固 - 默认关闭
+# protection = { mode = "sign" , path = "",ks-key-alias = "" ,ks-pass = "" ,key-pass= "" }
+# 架构支持 更改此项编译解包需要打开 - 默认关闭
 # ndk = ["x86_64", "arm64-v8a"]
-# 排除内置库 更改此项编译解包需要打开
-# excludeLib = ["yolo", "opencv", "paddleocr", "paddleocr", "ddddocr", "mlkitocr"]
+# 排除内置库 更改此项编译解包需要打开 - 默认关闭
+# excludeLib = ["yolo", "opencv", "paddleocr", "onnx", "ddddocr", "mlkitocr"]
 ```
