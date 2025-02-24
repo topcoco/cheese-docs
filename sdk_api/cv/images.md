@@ -88,6 +88,34 @@ base.release(b)
 
 
 
+### 剪切图片:`public static cropBitmap(bitmap: Bitmap, left: number, top: number, right: number, bottom: number): Bitmap` :white_check_mark:
+
+**参数**:
+
+- ⭐`Bitmap` (inputImage):图片
+- ⭐`number` (left):左
+- ⭐`number` (top):上
+- ⭐`number` (right):右
+- ⭐`number` (bottom):下
+
+**返回值**:
+
+- :green_circle:`Bitmap`:剪切后的Bitmap对象
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+const images = core.cv.images;
+const recordscreen = core.recordScreen;
+if (recordscreen.requestPermission(3)) {
+    let bit = recordscreen.captureScreen(3, 0, 0, 0, -1)
+    images.cropBitmap(bit, 128,22,352,26)
+}
+```
+
+
+
 ### 二值化:`public static binarize(inputImage: Bitmap, threshold: number): Bitmap` :white_check_mark:
 
 **参数**:
