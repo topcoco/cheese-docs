@@ -22,7 +22,7 @@ const base = core.base;
 const filese = core.files;
 const images = core.cv.images;
 let c = ocr.dddddOcr()
-//ddddocr和相关模型可在cheese官方网盘获取：https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234
+//训练好的推理模型下载：https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234 （其他 >Ai模型 >paddleocr模型）
 if (c.init("/storage/emulated/0/Pictures/model")) {
 //测试 ocr
     console.log("***************测试ocr")
@@ -92,6 +92,7 @@ for (const item of d.textBlocks) {
 **用法示例**:
 
 ```javascript
+//训练好的推理模型下载：https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234 （其他 >Ai模型 >paddleocr模型）
 const ocr = core.ocr;
 const recordscreen = core.recordScreen;
 let paddle = ocr.paddleOcr()
