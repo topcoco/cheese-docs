@@ -75,7 +75,7 @@ Cheese 支持以下 UI 技术：
 
 ## 下载所需环境
 
-- [点我下载](https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234)
+- [点我下载]([https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234](https://pan.baidu.com/s/1n9RUCE8jmOaf0PpGdpjr7A?pwd=1234)) 或在群文件下载
 
 ---
 
