@@ -133,6 +133,25 @@ if (recordscreen.requestPermission(3)) {
 }
 ```
 
+### Assets转成Bitmap: `public static assetsToBitmap(filePath: string): Bitmap`  :white_check_mark:
+
+**参数**:
+
+- ⭐`string`(filePath):文件路径
+
+**返回值**:
+
+- :green_circle:`Bitmap`:Bitmap对象
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+
+const converters = core.converters;
+console.log(converters.assetsToBitmap("1.png"))
+```
+
 ### Base64转成Bitmap: ` base64ToBitmap(base64String: string): Bitmap`  :white_check_mark:
 
 **参数**:
