@@ -31,6 +31,41 @@ console.log("IMEI", device.getIMEI())
 <div style="background-color: #952f2f; border-left: 6px solid #ffcc00; padding: 15px; margin: 15px 0; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); font-weight: bold;">
 🚨 重要提示：若最终用户未同意相关隐私政策，请不要调用此方法。
 </div>
+### 获取 设备名称:`getDeviceName(): string` :white_check_mark:
+
+**返回值**:
+
+- :green_circle:`string`:imei字符串
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+
+const device = core.device;
+console.log("设备名称", device.getDeviceName())
+```
+<div style="background-color: #952f2f; border-left: 6px solid #ffcc00; padding: 15px; margin: 15px 0; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); font-weight: bold;">
+🚨 重要提示：若最终用户未同意相关隐私政策，请不要调用此方法。
+</div>
+### 获取 设备电量:`getBatteryLevel(): number` :white_check_mark:
+
+**返回值**:
+
+- :green_circle:`number`:电量百分比
+- :red_circle:null
+
+**用法示例**:
+
+```javascript
+
+const device = core.device;
+console.log("设备电量", device.getBatteryLevel())
+```
+
+<div style="background-color: #952f2f; border-left: 6px solid #ffcc00; padding: 15px; margin: 15px 0; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); font-weight: bold;">
+🚨 重要提示：若最终用户未同意相关隐私政策，请不要调用此方法。
+</div>
 
 ### 是否支持 OAID:`supportedOAID(): boolean` :white_check_mark:
 
