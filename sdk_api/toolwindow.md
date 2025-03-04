@@ -18,7 +18,7 @@ const core = require('cheese-js');
 ```javascript
 
 const toolwindow = core.toolwindow;
-toolwindow.FloatingBall().show()
+toolwindow.floatingBall().show()
 ```
 
 ### 悬浮日志:`floatingLog(): IConsoleClient` :white_check_mark:
@@ -28,7 +28,7 @@ toolwindow.FloatingBall().show()
 ```javascript
 
 const toolwindow = core.toolwindow;
-toolwindow.FloatingLog().show()
+toolwindow.floatingLog().show()
 ```
 
 ### 详细日志窗口:`detailedLog(): void` :white_check_mark:
@@ -38,5 +38,5 @@ toolwindow.FloatingLog().show()
 ```javascript
 
 const toolwindow = core.toolwindow;
-toolwindow.DetailedLog()
+toolwindow.detailedLog()
 ```
