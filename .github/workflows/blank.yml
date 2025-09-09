@@ -1,0 +1,51 @@
+name: VitePress 文档自动部署
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: |
+          npm install
+          npm add -D vitepress@next
+          npm install
+
+      - name: 构建文档
+        run: npm run docs:build
+        env:
+          NODE_ENV: production
+
+      - name: 部署到服务器
+        uses: easingthemes/ssh-deploy@v4
+        with:
+          # 必须使用大写的参数名
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: "root"
+          # REMOTE_PORT: ${{ secrets.SSH_PORT || '22' }}
+
+          # 部署配置
+          SOURCE: "./.vitepress/dist/"
+          TARGET: "/www/wwwroot/docs"
+          ARGS: "-avzr "
+          EXCLUDE: "/node_modules/"
+
+
+          # 可选的前置脚本（注意使用SCRIPT_BEFORE而非remote-script-before）
+#          SCRIPT_BEFORE: |
+#            mkdir -p /www/wwwroot/cheese
+#            chown -R www-data:www-data /www/wwwroot/cheese

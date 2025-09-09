@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "git": "github.bat"
+  },
+  "devDependencies": {
+    "flexsearch": "^0.7.31"
+  }
+}
