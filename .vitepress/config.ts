@@ -32,11 +32,14 @@ export default defineConfig({
                 link: '/other/ai'
             },
             {
-                text: '使用手册',
-                collapsed: true,
+                text: '指南',
+                collapsed: false,
                 items: [
                     { text: '图标描述', link: '/other/icon-description' },
-                    { text: '玩转异步和同步?', link: '/other/async-and-sync' },
+                    { text: 'Android使用教程', link: '/guide/android' },
+                    { text: 'IOS使用教程', link: '/guide/ios' },
+
+                    // { text: '玩转异步和同步?', link: '/other/async-and-sync' },
                 ]
             },
 

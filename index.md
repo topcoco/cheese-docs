@@ -13,7 +13,7 @@ meta:
 hero:
   name: Cheese
   text: 奶酪
-  tagline: 这是一块神奇的美味奶酪，帮您解决大部分重复性操作的烦恼。
+  tagline: 这是一套支持 iOS 脱机免越狱与 Android 免 root 的自动化测试框架，跨平台 UI 和高度复用 API，双端可共享同一接口完成相同操作。
   actions:
     - theme: brand
       text: 开始梦幻般的旅程
@@ -21,9 +21,9 @@ hero:
     - theme: brand
       text: 项目信息
       link: /other/project-information
-    - theme: brand
-      text: 高级加固保护你的脚本代码转汇编不可还原-支持[Easyclick,Aiwork,Cheese，Autojs]
-      link: http://49.232.248.72:8787
+#    - theme: brand
+#      text: 高级加固保护你的脚本代码转汇编不可还原-支持[Easyclick,Aiwork,Cheese，Autojs]
+#      link: http://49.232.248.72:8787
     - theme: brand
       text: 用户协议
       link: /agreement
@@ -41,14 +41,14 @@ hero:
 features:
   - icon: <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><path fill="#8ed6fb" d="M117.29 98.1L66.24 127v-22.51L98 87zm3.5-3.16V34.55l-18.68 10.8v38.81l18.67 10.77zM10.71 98.1l51 28.88v-22.49L29.94 87zm-3.5-3.16V34.55l18.68 10.8v38.81zm2.19-64.3L61.76 1v21.76L28.21 41.21l-.27.15zm109.18 0L66.24 1v21.76L99.79 41.2l.27.15l18.54-10.71z"/><path fill="#1c78c0" d="M61.76 99.37L30.37 82.1V47.92L61.76 66zm4.48 0l31.39-17.25v-34.2L66.24 66zM32.5 44L64 26.66L95.5 44L64 62.16z"/></svg>
     title: 高扩展
-    details: 采用Vscode、IDEA编写脚本代码,支持Java、Python、nodejs、GO、Rust、Lua等多种主流语言
+    details: 采用Vscode、IDEA编写脚本代码,支持Java、Python、Js等多种主流语言
 
   - icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 256 220.8"><path fill="#41B883" d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"/><path fill="#41B883" d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"/><path fill="#35495E" d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z"/></svg>
     title: 美观界面
-    details: 支持Vue和Xml编写Ui
+    details: 支持Vue、Xml、自研跨平台原生Jui编写精美界面
   - icon: 🚀
     title: 多种自动化方案
-    details: HID、无障碍、ROOT、ADB、Frida
+    details: HID、无障碍、ROOT、ADB、Frida、Wda
 
 ---
 
