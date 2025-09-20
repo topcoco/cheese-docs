@@ -139,7 +139,7 @@ console.log(`双指点击结果: ${result}`);
 - `boolean`: 操作是否成功
 
 **用法示例**:
-[UiNode.java](../../../../Documents/xwechat_files/wxid_mhg6hgcwpwnh22_0c12/msg/file/2025-09/UiNode.java)
+
 ```javascript
 const result = node.tap_with_number_of_taps(3, 1);
 console.log(`多次点击结果: ${result}`);
