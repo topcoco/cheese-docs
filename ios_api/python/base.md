@@ -25,7 +25,7 @@ elapsed_ms = (time.perf_counter() - start_time) * 1000  # 转为毫秒
 print(f"\n请求延时: {delay_ms}ms, 实际耗时: {elapsed_ms:.2f}ms")
 ```
 
-### 打印日志: `printt(msg: str): void`  :white_check_mark:
+### 打印日志: `print(msg: str): void`  :white_check_mark:
 
 **参数**:
 
@@ -36,7 +36,7 @@ print(f"\n请求延时: {delay_ms}ms, 实际耗时: {elapsed_ms:.2f}ms")
 ```python
 from cheese_core import Base
 test_msg = "测试打印功能 - Hello from Python"
-Base.printt(test_msg)
+Base.print(test_msg)
 ```
 
 ### 退出脚本: `exit(): void`  :white_check_mark:

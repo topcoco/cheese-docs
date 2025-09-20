@@ -27,10 +27,10 @@ export default defineConfig({
 
         sidebar: [
 
-            {
-                text: 'Ai',
-                link: '/other/ai'
-            },
+            // {
+            //     text: 'Ai',
+            //     link: '/other/ai'
+            // },
             {
                 text: '指南',
                 collapsed: false,
@@ -38,6 +38,13 @@ export default defineConfig({
                     { text: '图标描述', link: '/other/icon-description' },
                     { text: 'Android使用教程', link: '/guide/android' },
                     { text: 'IOS使用教程', link: '/guide/ios' },
+                    { text: 'AI助手',
+                        items: [
+                            { text: 'Z', link: 'https://zread.ai/topcoco/cheese-docs' },
+                            { text: 'Deepwiki', link: 'https://deepwiki.com/topcoco/cheese-docs' },
+                            ]
+                    },
+
 
                     // { text: '玩转异步和同步?', link: '/other/async-and-sync' },
                 ]
@@ -346,104 +353,352 @@ export default defineConfig({
                 text: 'IOS文档',
                 collapsed: true,
                 items: [
+
                     {
-                        text: 'app 应用函数',
+                        text: 'Python绑定',
                         collapsed: true,
                         items: [
-                            { text: '展开所有方法', link: '/ios_api/app' }
+
+                            {
+                                text: 'app 应用函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/app' }
+                                ]
+                            },
+                            {
+                                text: 'assets 静态资源函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/assets' }
+                                ]
+                            },
+                            {
+                                text: 'base 基础函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/base' }
+                                ]
+                            },
+                            {
+                                text: 'device 设备函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/device' }
+                                ]
+                            },
+                            {
+                                text: 'http 网络函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/http' }
+                                ]
+                            },
+                            {
+                                text: 'image 图像函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/image' }
+                                ]
+                            },
+                            {
+                                text: 'keyboard 键盘函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/keyboard' }
+                                ]
+                            },
+                            {
+                                text: 'keys 按键函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/keys' }
+                                ]
+                            },
+                            {
+                                text: 'ocr 识别函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/ocr' }
+                                ]
+                            },
+                            {
+                                text: 'path 文件系统函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/path' }
+                                ]
+                            },
+                            {
+                                text: 'point 坐标函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/point' }
+                                ]
+                            },
+                            {
+                                text: 'recordscreen 录屏函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/recordscreen' }
+                                ]
+                            },
+                            {
+                                text: 'ui 界面函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/ui' }
+                                ]
+                            },
+                            {
+                                text: 'uinode Ui节点函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/uinode' }
+                                ]
+                            },
+                            {
+                                text: 'wda Wda函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/python/wda' }
+                                ]
+                            }
                         ]
                     },
+
                     {
-                        text: 'assets 静态资源函数',
+                        text: 'JavaScript 绑定',
                         collapsed: true,
                         items: [
-                            { text: '展开所有方法', link: '/ios_api/assets' }
+                            {
+                                text: 'app 应用函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/app' }
+                                ]
+                            },
+                            {
+                                text: 'assets 静态资源函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/assets' }
+                                ]
+                            },
+                            {
+                                text: 'base 基础函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/base' }
+                                ]
+                            },
+                            {
+                                text: 'device 设备函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/device' }
+                                ]
+                            },
+
+                            {
+                                text: 'fs 文件函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/fs' }
+                                ]
+                            },
+                            {
+                                text: 'http 网络函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/http' }
+                                ]
+                            },
+                            {
+                                text: 'image 图像函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/image' }
+                                ]
+                            },
+                            {
+                                text: 'keyboard 键盘函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/keyboard' }
+                                ]
+                            },
+                            {
+                                text: 'keys 按键函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/keys' }
+                                ]
+                            },
+                            {
+                                text: 'ocr 识别函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/ocr' }
+                                ]
+                            },
+                            {
+                                text: 'path 文件系统函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/path' }
+                                ]
+                            },
+                            {
+                                text: 'point 坐标函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/point' }
+                                ]
+                            },
+                            {
+                                text: 'recordscreen 录屏函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/recordscreen' }
+                                ]
+                            },
+                            {
+                                text: 'thread 线程函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/thread' }
+                                ]
+                            },
+                            {
+                                text: 'ui 界面函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/ui' }
+                                ]
+                            },
+                            {
+                                text: 'uinode Ui节点函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/uinode' }
+                                ]
+                            },
+                            {
+                                text: 'wda Wda函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/wda' }
+                                ]
+                            },
+                            {
+                                text: 'zip 解压函数',
+                                collapsed: true,
+                                items: [
+                                    { text: '展开所有方法', link: '/ios_api/js/zip' }
+                                ]
+                            }
                         ]
                     },
-                    {
-                        text: 'base 基础函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/base' }
-                        ]
-                    },
-                    {
-                        text: 'device 设备函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/device' }
-                        ]
-                    },
-                    {
-                        text: 'http 网络函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/http' }
-                        ]
-                    },
-                    {
-                        text: 'image 图像函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/image' }
-                        ]
-                    },
-                    {
-                        text: 'keyboard 键盘函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/keyboard' }
-                        ]
-                    },
-                    {
-                        text: 'keys 按键函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/keys' }
-                        ]
-                    },
-                    {
-                        text: 'ocr Ocr函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/ocr' }
-                        ]
-                    },
-                    {
-                        text: 'path 文件系统函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/path' }
-                        ]
-                    },
-                    {
-                        text: 'point 坐标函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/point' }
-                        ]
-                    },
-                    {
-                        text: 'recordscreen 录屏函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/recordscreen' }
-                        ]
-                    },
-                    {
-                        text: 'ui 界面函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/ui' }
-                        ]
-                    },
-                    {
-                        text: 'uinode Ui节点函数',
-                        collapsed: true,
-                        items: [
-                            { text: '展开所有方法', link: '/ios_api/uinode' }
-                        ]
-                    }
+                    //
+                    // {
+                    //     text: 'app 应用函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/app' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'assets 静态资源函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/assets' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'base 基础函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/base' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'device 设备函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/device' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'http 网络函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/http' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'image 图像函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/image' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'keyboard 键盘函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/keyboard' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'keys 按键函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/keys' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'ocr Ocr函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/ocr' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'path 文件系统函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/path' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'point 坐标函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/point' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'recordscreen 录屏函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/recordscreen' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'ui 界面函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/ui' }
+                    //     ]
+                    // },
+                    // {
+                    //     text: 'uinode Ui节点函数',
+                    //     collapsed: true,
+                    //     items: [
+                    //         { text: '展开所有方法', link: '/ios_api/uinode' }
+                    //     ]
+                    // }
                 ]
             },
             {
