@@ -29,7 +29,7 @@ const result = recordscreen.request_permission(1, 30);
 console.log(`权限请求结果: ${result}`);
 ```
 
-### 截屏: `capture_screen(mode: number, time: number): any`  :white_check_mark:
+### 截屏: `capture_screen(mode: number, time: number): JsImage`  :white_check_mark:
 
 **参数**:
 
@@ -38,7 +38,7 @@ console.log(`权限请求结果: ${result}`);
 
 **返回**:
 
-- `any`: JavaJsImage 对象或 null
+- `any`: JsImage 对象或 null
 
 **用法示例**:
 
