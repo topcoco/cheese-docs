@@ -145,8 +145,8 @@ console.log(`获取到的值: ${value}`);
        "children": [
          {
            "type": "Switch",
-           "id": "chickenMode",
-           "label": "养鸡模式",
+           "id": "WDAMode",
+           "label": "WDA模式",
            "checked": true,
            "style": {
              "margin": { "bottom": 20 }
@@ -336,10 +336,10 @@ console.log(`获取到的值: ${value}`);
              },
              {
                "type": "TextField",
-               "id": "followCount",
-               "label": "关注次数",
+               "id": "swipeNum",
+               "label": "滑动次数",
                "value": "50", 
-               "placeholder": "输入关注次数",
+               "placeholder": "输入滑动次数",
                "keyboardType": "number",
                "leadingIcon": "favorite",
                "style": {
