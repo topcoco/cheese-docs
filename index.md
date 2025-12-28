@@ -170,7 +170,7 @@ features:
 <!-- 横幅内容 -->
 <div class="banner">
   ESP32系列USB和蓝牙HID固件和HID开发制作课程，全网最低：
-  <a href="https://b23.tv/QAXxwsI" target="_blank" class="banner-link">
+  <a href="https://b23.tv/b5CIsLv" target="_blank" class="banner-link">
     点击购买
   </a>
 </div>
